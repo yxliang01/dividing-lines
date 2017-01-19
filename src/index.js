@@ -3,21 +3,21 @@
 import {terminal as term} from 'terminal-kit';
 
 function helper(str, width) {
-    return str.repeat(width || term.width);
+    return str.repeat(width || term.width-1);
 }
 
-const equal = function() {helper('=', ...arguments)};
+const equal = (...args)=>helper('=', ...args);
 
-const dash = function() {helper('-', ...arguments)};
+const dash = (...args)=>helper('-', ...args);
 
-const underscore = function() {helper('_', ...arguments)};
+const underscore = (...args)=>helper('_', ...args);
 
-const wave = function() {helper('~', ...arguments)};
+const wave = (...args)=>helper('~', ...args);
 
-const singleQuote = function() {helper('\'', ...arguments)};
+const singleQuote = (...args)=>helper('\'', ...args);
 
-const doubleQuote = function() {helper('"', ...arguments)};
+const doubleQuote = (...args)=>helper('"', ...args);
 
-const star = function() {helper('*', ...arguments)};
+const star = (...args)=>helper('*', ...args);
 
 export {equal, dash, underscore, wave, singleQuote, doubleQuote, star};
