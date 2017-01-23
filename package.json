@@ -3,6 +3,10 @@
   "version": "1.0.1",
   "description": "Different styles of dividing lines!",
   "main": "dist/index.js",
+  "bin":{
+    "dividing-line":"dist/bin.js",
+    "dline":"dist/bin.js"
+  },
   "repository": "https://yxliang01@github.com/yxliang01/dividing-lines.git",
   "author": "Xiao Liang Yu <13267.okk@gmail.com>",
   "license": "MIT",
@@ -18,9 +22,12 @@
     "publish-please": "publish-please",
     "prepublish": "publish-please guard",
     "prepull": "rimraf dist",
-    "postpull": "npm run build"
+    "postpull": "npm run build",
+    "postpublish": "git push --tags"
   },
   "dependencies": {
+    "defined": "^1.0.0",
+    "detect-node": "^2.0.3",
     "terminal-kit": "^0.26.1"
   }
 }

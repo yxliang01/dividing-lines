@@ -1,23 +1,29 @@
 "use strict";
 
-import {terminal as term} from 'terminal-kit';
+import isNode from "detect-node";
+import defined from "defined";
+import {terminal as term} from "terminal-kit";
 
 function helper(str, width) {
-    return str.repeat(width || term.width-1);
+    return str.repeat(defined(width, isNode ? term.width - 1 : undefined));
 }
 
-const equal = (...args)=>helper('=', ...args);
+const DividingLines = {
+    equal: (...args) => helper('=', ...args),
 
-const dash = (...args)=>helper('-', ...args);
+    dash: (...args) => helper('-', ...args),
 
-const underscore = (...args)=>helper('_', ...args);
+    underscore: (...args) => helper('_', ...args),
 
-const wave = (...args)=>helper('~', ...args);
+    wave: (...args) => helper('~', ...args),
 
-const singleQuote = (...args)=>helper('\'', ...args);
+    singleQuote: (...args) => helper('\'', ...args),
 
-const doubleQuote = (...args)=>helper('"', ...args);
+    doubleQuote: (...args) => helper('"', ...args),
 
-const star = (...args)=>helper('*', ...args);
+    star: (...args) => helper('*', ...args)
 
-export {equal, dash, underscore, wave, singleQuote, doubleQuote, star};
+};
+
+
+export default DividingLines;
