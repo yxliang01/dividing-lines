@@ -88,4 +88,4 @@ var DividingLines = {
 };
 
 exports.default = DividingLines;
-//# sourceMappingURL=index.js.map
+module.exports = exports["default"];
