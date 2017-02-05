@@ -21,7 +21,9 @@ const DividingLines = {
 
     doubleQuote: (...args) => helper('"', ...args),
 
-    star: (...args) => helper('*', ...args)
+    star: (...args) => helper('*', ...args),
+
+    hash: (...args) => helper('#', ...args)
 
 };
 

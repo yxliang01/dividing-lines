@@ -75,9 +75,17 @@ var DividingLines = {
         }
 
         return helper.apply(undefined, ['*'].concat(args));
+    },
+
+    hash: function hash() {
+        for (var _len8 = arguments.length, args = Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
+            args[_key8] = arguments[_key8];
+        }
+
+        return helper.apply(undefined, ['#'].concat(args));
     }
 
 };
 
 exports.default = DividingLines;
-module.exports = exports["default"];
+//# sourceMappingURL=index.js.map
