@@ -4,8 +4,10 @@ import isNode from "detect-node";
 import defined from "defined";
 import {terminal as term} from "terminal-kit";
 
+const DEFAULT_WIDTH = 80;
+
 function helper(str, width) {
-    return str.repeat(defined(width, isNode ? term.width - 1 : undefined));
+    return str.repeat(defined(width, isNode ? term.width - 1 : undefined, DEFAULT_WIDTH));
 }
 
 const DividingLines = {

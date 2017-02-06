@@ -2,4 +2,4 @@
 
 import DividingLines from './index.js'
 
-console.log(DividingLines[process.argv[2]]());
+console.log(DividingLines[process.argv[2]](...process.argv.slice(3)));

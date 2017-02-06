@@ -16,8 +16,10 @@ var _terminalKit = require("terminal-kit");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var DEFAULT_WIDTH = 80;
+
 function helper(str, width) {
-    return str.repeat((0, _defined2.default)(width, _detectNode2.default ? _terminalKit.terminal.width - 1 : undefined));
+    return str.repeat((0, _defined2.default)(width, _detectNode2.default ? _terminalKit.terminal.width - 1 : undefined, DEFAULT_WIDTH));
 }
 
 var DividingLines = {
