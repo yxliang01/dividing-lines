@@ -1,6 +1,6 @@
 {
   "name": "dividing-lines",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Different styles of dividing lines!",
   "main": "dist/index.js",
   "bin":{
